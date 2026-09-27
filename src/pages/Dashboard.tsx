@@ -175,12 +175,12 @@ ${scanResult.warnings.length > 0 ? scanResult.warnings.map((w) => `⚠ ${w}`).jo
       {/* Sticky Clean Navbar */}
       <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
 
-      <main className="flex-1 max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 py-5 sm:py-8 relative z-10 space-y-6 sm:space-y-8">
+      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 lg:py-12 relative z-10 space-y-8 sm:space-y-10">
         {/* ── TAB 1: SINGLE SITE SCANNER ────────────────────────────────────────── */}
         {activeTab === 'scan' && (
-          <div className="space-y-8 animate-fadeIn">
+          <div className="space-y-10 animate-fadeIn">
             {/* Hero Header & Quick Stats */}
-            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-2">
+            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 pb-2">
               <div>
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-bold uppercase tracking-wider mb-3">
                   <Sparkles className="w-3.5 h-3.5" /> Next-Gen Security Inspection Engine
@@ -194,29 +194,29 @@ ${scanResult.warnings.length > 0 ? scanResult.warnings.map((w) => `⚠ ${w}`).jo
               </div>
 
               {/* Stat Cards */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 gap-2.5 lg:w-96 flex-shrink-0">
-                <div className="p-3 rounded-xl bg-slate-900/70 border border-slate-800 shadow-md">
+              <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 gap-3 lg:w-96 flex-shrink-0">
+                <div className="p-4 rounded-xl bg-slate-900/70 border border-slate-800 shadow-md">
                   <div className="text-xs text-slate-400 font-medium">Rules Audited</div>
-                  <div className="text-xl font-extrabold text-white mt-0.5">18 Checks</div>
+                  <div className="text-xl font-extrabold text-white mt-1">18 Checks</div>
                 </div>
-                <div className="p-3 rounded-xl bg-slate-900/70 border border-slate-800 shadow-md">
+                <div className="p-4 rounded-xl bg-slate-900/70 border border-slate-800 shadow-md">
                   <div className="text-xs text-slate-400 font-medium">Engine Mode</div>
-                  <div className="text-xl font-extrabold text-sky-400 mt-0.5">Deep Scan</div>
+                  <div className="text-xl font-extrabold text-sky-400 mt-1">Deep Scan</div>
                 </div>
-                <div className="p-3 rounded-xl bg-slate-900/70 border border-slate-800 shadow-md">
+                <div className="p-4 rounded-xl bg-slate-900/70 border border-slate-800 shadow-md">
                   <div className="text-xs text-slate-400 font-medium">Database</div>
-                  <div className="text-xl font-extrabold text-emerald-400 mt-0.5">MongoDB</div>
+                  <div className="text-xl font-extrabold text-emerald-400 mt-1">MongoDB</div>
                 </div>
-                <div className="p-3 rounded-xl bg-slate-900/70 border border-slate-800 shadow-md">
+                <div className="p-4 rounded-xl bg-slate-900/70 border border-slate-800 shadow-md">
                   <div className="text-xs text-slate-400 font-medium">Encryption</div>
-                  <div className="text-xl font-extrabold text-purple-400 mt-0.5">TLS 1.3</div>
+                  <div className="text-xl font-extrabold text-purple-400 mt-1">TLS 1.3</div>
                 </div>
               </div>
             </div>
 
             {/* Main Search Bar Card */}
-            <div className="glass-card p-4 sm:p-8 border-slate-750 shadow-2xl">
-              <form onSubmit={handleScan} className="space-y-4">
+            <div className="glass-card p-5 sm:p-8 lg:p-10 border-slate-750 shadow-2xl">
+              <form onSubmit={handleScan} className="space-y-5">
                 <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider">
                   Target Website URL
                 </label>
@@ -251,8 +251,8 @@ ${scanResult.warnings.length > 0 ? scanResult.warnings.map((w) => `⚠ ${w}`).jo
               </form>
 
               {/* Quick Sample Audit Chips */}
-              <div className="mt-5 pt-4 border-t border-slate-800">
-                <div className="flex flex-wrap items-center gap-2">
+              <div className="mt-6 pt-5 border-t border-slate-800">
+                <div className="flex flex-wrap items-center gap-2.5">
                   <span className="text-xs font-bold text-slate-400 uppercase tracking-wider mr-1">
                     Quick Audits:
                   </span>
@@ -307,9 +307,9 @@ ${scanResult.warnings.length > 0 ? scanResult.warnings.map((w) => `⚠ ${w}`).jo
                       <span className="text-xs text-slate-400">Select a sample to execute a live audit</span>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6">
                   {/* Feature Card 1 */}
-                  <div className="glass-card p-6 border-slate-800 space-y-3 hover:border-sky-500/30 transition-all">
+                  <div className="glass-card p-6 sm:p-7 border-slate-800 space-y-4 hover:border-sky-500/30 transition-all">
                     <div className="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400">
                       <Lock className="w-6 h-6" />
                     </div>
@@ -320,7 +320,7 @@ ${scanResult.warnings.length > 0 ? scanResult.warnings.map((w) => `⚠ ${w}`).jo
                   </div>
 
                   {/* Feature Card 2 */}
-                  <div className="glass-card p-6 border-slate-800 space-y-3 hover:border-purple-500/30 transition-all">
+                  <div className="glass-card p-6 sm:p-7 border-slate-800 space-y-4 hover:border-purple-500/30 transition-all">
                     <div className="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
                       <FileCode className="w-6 h-6" />
                     </div>
@@ -331,7 +331,7 @@ ${scanResult.warnings.length > 0 ? scanResult.warnings.map((w) => `⚠ ${w}`).jo
                   </div>
 
                   {/* Feature Card 3 */}
-                  <div className="glass-card p-6 border-slate-800 space-y-3 hover:border-emerald-500/30 transition-all">
+                  <div className="glass-card p-6 sm:p-7 border-slate-800 space-y-4 hover:border-emerald-500/30 transition-all">
                     <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
                       <ShieldAlert className="w-6 h-6" />
                     </div>
@@ -348,9 +348,9 @@ ${scanResult.warnings.length > 0 ? scanResult.warnings.map((w) => `⚠ ${w}`).jo
             {scanResult && (
               <div className="space-y-6 animate-fadeIn">
                 {/* Result Overview Header Card */}
-                <div className="glass-card p-6 sm:p-8 border-sky-500/30 space-y-6 shadow-2xl">
+                <div className="glass-card p-7 sm:p-8 lg:p-10 border-sky-500/30 space-y-8 shadow-2xl">
                   {/* Top Bar: Score Gauge, Identity, Verdict */}
-                  <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-6 pb-6 border-b border-slate-800">
+                  <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8 pb-8 border-b border-slate-800">
                     <div className="flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
                       <ScoreRing score={scanResult.safetyScore} size={140} strokeWidth={9} label="Safety Score" />
 
@@ -430,7 +430,7 @@ ${scanResult.warnings.length > 0 ? scanResult.warnings.map((w) => `⚠ ${w}`).jo
                     <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 flex items-center gap-1.5">
                       <BarChart3 className="w-4 h-4 text-sky-400" /> Multi-Vector Security Differential
                     </h4>
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
                       {[
                         { label: 'Transport Encryption', score: scanResult.scores.encryption, icon: Lock, color: 'text-sky-400' },
                         { label: 'Security Headers', score: scanResult.scores.headers, icon: FileCode, color: 'text-purple-400' },
@@ -456,7 +456,7 @@ ${scanResult.warnings.length > 0 ? scanResult.warnings.map((w) => `⚠ ${w}`).jo
                   </div>
 
                   {/* Two-Column Findings: Positives vs Warnings */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6">
                     {/* Strengths Card */}
                     <div className="p-5 rounded-2xl bg-emerald-500/5 border border-emerald-500/20 space-y-3">
                       <h4 className="text-xs font-bold text-emerald-400 uppercase tracking-wider flex items-center gap-2">

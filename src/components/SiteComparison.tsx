@@ -205,24 +205,24 @@ Category Breakdown:
   };
 
   return (
-    <div className="space-y-8 animate-fadeIn">
+    <div className="space-y-10 animate-fadeIn">
       {/* Header Banner */}
-      <div>
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-bold uppercase tracking-wider mb-2">
+      <div className="pt-2">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-bold uppercase tracking-wider mb-3">
           <GitCompare className="w-3.5 h-3.5" /> Head-to-Head Evaluation
         </div>
-        <h1 className="text-3xl font-extrabold text-white tracking-tight">
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
           Side-by-Side <span className="gradient-text">Website Comparator</span>
         </h1>
-        <p className="text-slate-400 text-sm mt-1 max-w-2xl">
+        <p className="text-slate-400 text-sm sm:text-base mt-2 max-w-2xl leading-relaxed">
           Evaluate two domains simultaneously to spot impersonation, security header deficiencies, and protocol disparities.
         </p>
       </div>
 
       {/* Main Input Form Card */}
-      <div className="card p-4 sm:p-8 space-y-6">
-        <form onSubmit={handleCompare} className="space-y-5">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-3 sm:gap-4 items-center">
+      <div className="card p-5 sm:p-8 lg:p-10 space-y-7">
+        <form onSubmit={handleCompare} className="space-y-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-5 items-center">
             {/* Target 1 */}
             <div className="lg:col-span-5 space-y-1.5">
               <label className="block text-xs font-bold text-sky-400 uppercase tracking-wider">
@@ -270,7 +270,7 @@ Category Breakdown:
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
+          <div className="flex flex-wrap items-center justify-between gap-4 pt-3">
             <button
               type="submit"
               disabled={loading}
@@ -308,13 +308,13 @@ Category Breakdown:
         </form>
 
         {/* Preset Showcase Cards */}
-        <div className="pt-6 border-t border-slate-800 space-y-3">
+        <div className="pt-7 border-t border-slate-800 space-y-4">
           <div className="flex items-center gap-1.5 text-xs font-bold text-slate-400 uppercase tracking-wider">
             <Sparkles className="w-4 h-4 text-purple-400" />
             <span>Recommended Head-to-Head Presets</span>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {PRESET_COMPARISONS.map((preset, idx) => (
               <div
                 key={idx}
@@ -356,8 +356,8 @@ Category Breakdown:
       {result && (
         <div className="space-y-6 animate-fadeIn">
           {/* Winner Banner */}
-          <div className="card p-6 bg-gradient-to-r from-emerald-500/10 via-sky-500/10 to-purple-500/10 border-emerald-500/40 shadow-xl">
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="card p-7 sm:p-8 bg-gradient-to-r from-emerald-500/10 via-sky-500/10 to-purple-500/10 border-emerald-500/40 shadow-xl">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-5">
               <div className="flex items-center gap-4">
                 <div className="w-14 h-14 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center flex-shrink-0 text-emerald-400">
                   <ShieldCheck className="w-8 h-8" />
@@ -391,7 +391,7 @@ Category Breakdown:
           </div>
 
           {/* Multi-Vector Comparison Score Bars */}
-          <div className="card p-6 space-y-4">
+          <div className="card p-6 sm:p-7 space-y-5">
             <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
               <BarChart3 className="w-4 h-4 text-sky-400" /> Multi-Vector Security Differential
             </h3>
@@ -445,9 +445,9 @@ Category Breakdown:
           </div>
 
           {/* Side by Side Detailed Comparison Cards */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
             {/* Site 1 Card */}
-            <div className="card p-6 border-sky-500/30 space-y-5 shadow-xl">
+            <div className="card p-6 sm:p-7 border-sky-500/30 space-y-6 shadow-xl">
               <div className="flex items-start justify-between gap-4 border-b border-slate-800 pb-4">
                 <div>
                   <span className="text-[10px] font-extrabold px-2.5 py-0.5 rounded bg-sky-500/10 text-sky-400 border border-sky-500/20 uppercase tracking-widest">
@@ -510,7 +510,7 @@ Category Breakdown:
             </div>
 
             {/* Site 2 Card */}
-            <div className="card p-6 border-purple-500/30 space-y-5 shadow-xl">
+            <div className="card p-6 sm:p-7 border-purple-500/30 space-y-6 shadow-xl">
               <div className="flex items-start justify-between gap-4 border-b border-slate-800 pb-4">
                 <div>
                   <span className="text-[10px] font-extrabold px-2.5 py-0.5 rounded bg-purple-500/10 text-purple-400 border border-purple-500/20 uppercase tracking-widest">
